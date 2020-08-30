@@ -6,9 +6,17 @@ app = Flask(__name__)
 mod = Blueprint("games", __name__)
 
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def index():
-    return render_template("index.html")
+    users = request.form.get("user")
+    if users == "user":
+        return redirect("user")
+    return render_template("index.html", user=users)
+
+
+@app.route("/user")
+def user():
+    return render_template("user.html")
 
 
 if __name__ == "__main__":
