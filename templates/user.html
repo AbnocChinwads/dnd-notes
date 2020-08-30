@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %} {% block content %}
+
+<h2 class="heading-style-uppercase heading-centred">Your name here</h2>
+
+{% with messages = get_flashed_messages(with_categories=true) %} {% if messages
+%} {% for category, message in messages %}
+<div class="alert alert-{{ category }}">
+  <div id="hide" class="btn close" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </div>
+  {{ message }}
+</div>
+{% endfor %} {% endif %} {% endwith %}
+
+{% endblock %}

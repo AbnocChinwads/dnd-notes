@@ -1,0 +1,148 @@
+/*--------------------------------------------------------- Body*/
+
+body {
+  text-align: center;
+  position: relative;
+  min-height: 100vh;
+  background-color: #f8f9fa;
+  color: #343a40;
+  padding-bottom: 4rem; /* Footer position */
+}
+
+p {
+  white-space: pre-wrap; /* Preserve text formatting when retrieving reviews from the database */
+  overflow-wrap: break-word;
+}
+
+/*--------------------------------------------------------- Header*/
+
+h1 {
+  text-align: justify;
+  font-size: 2rem;
+  padding-left: 0.6875rem;
+} /* Centres main header on page */
+
+.heading-style-uppercase {
+  text-transform: uppercase;
+}
+
+.heading-centred {
+  text-align: center;
+}
+
+/*--------------------------------------------------------- Switch*/
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #fff;
+}
+
+.custom-control-input ~ .custom-control-label::before {
+  background-color: #343a40; /* Background colour of unchecked slider */
+}
+
+.custom-control-input ~ .custom-control-label::after {
+  background-color: #fff; /* Colour of sliding dot when slider is unchecked */
+}
+
+.custom-control-input:checked ~ .custom-control-label::after {
+  background-color: #343a40 !important;
+}
+
+.close {
+  float: right;
+  padding: 1px 5px;
+}
+
+/*--------------------------------------------------------- Anchors - all*/
+
+a:hover {
+  color: #daa520; /* Bring hover colour inline with colour scheme */
+}
+
+/*--------------------------------------------------------- Buttons*/
+
+.btn-margin {
+  margin: 0.5rem;
+}
+
+/*--------------------------------------------------------- Textarea*/
+
+textarea {
+  white-space: pre-wrap; /* Preserve text formatting when editing a review */
+}
+
+/*--------------------------------------------------------- Images*/
+
+img {
+  width: 100%;
+}
+
+/*--------------------------------------------------------- Footer*/
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.anchor-styling {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem; /* Space between social media links */
+  color: #343a40;
+}
+
+/*--------------------------------------------------------- Dark Mode*/
+
+.body-dark {
+  background-color: #343a40;
+  color: #daa520;
+}
+
+.footer-dark {
+  background-color: #343a40;
+  color: #daa520;
+  text-align: center;
+}
+
+.anchor-styling-dark {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  color: #daa520;
+}
+
+.anchor-styling-dark:hover {
+  color: #8979d4; /* Bring hover colour inline with colour scheme */
+}
+
+/*--------------------------------------------------------- Media Queries*/
+
+@media (prefers-color-scheme: dark) {
+  /* 
+      If user has preferred colour scheme set to dark,
+      these values will be used instead of the regular
+      lighter values 
+    */
+  .body-dark {
+    background-color: #343a40;
+    color: #daa520;
+  }
+
+  .footer-dark {
+    background-color: #343a40;
+    color: #daa520;
+    text-align: center;
+  }
+
+  .anchor-styling-dark {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    color: #daa520;
+  }
+
+  .anchor-styling-dark:hover {
+    color: #8979d4; /* Bring hover colour inline with colour scheme */
+  }
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+{% extends 'base.html' %} {% block content %}
+
+<h2 class="heading-style-uppercase heading-centred">Who are you?</h2>
+
+{% with messages = get_flashed_messages(with_categories=true) %} {% if messages
+%} {% for category, message in messages %}
+<div class="alert alert-{{ category }}">
+  <div id="hide" class="btn close" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </div>
+  {{ message }}
+</div>
+{% endfor %} {% endif %} {% endwith %}
+
+<form action="" method="get">
+  <label class="heading-style-uppercase btn-margin" for="user">What's your name?</label>
+    <br><input class="btn-margin" type="text" name="user" id="user">
+    <br><input class="btn-margin" type="submit" value="Submit">
+</form>
+
+{% endblock %}
