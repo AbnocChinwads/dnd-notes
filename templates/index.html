@@ -14,9 +14,9 @@
 </div>
 {% endfor %} {% endif %} {% endwith %}
 
-<form action="user" method="GET">
+<form action="{{ url_for('user', users_id = users._id) }}" method="GET">
   <label class="heading-style-uppercase btn-margin" for="user">What's your name?</label>
-    <br><input class="btn-margin" type="text" name="user" id="user">
+    <br><input class="btn-margin" type="text" name="users" id="user">
     <br><input class="btn-margin" type="submit" value="Submit">
 </form>
 

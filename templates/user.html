@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 
 {% extends 'base.html' %} {% block content %}
-{% for user in users %}
-<h2 class="heading-style-uppercase heading-centred">Welcome {{ user.name }}</h2>
-{% endfor %}
+
+<h2 class="heading-style-uppercase heading-centred">Welcome {{ user }}</h2>
 
 {% with messages = get_flashed_messages(with_categories=true) %} {% if messages
 %} {% for category, message in messages %}
